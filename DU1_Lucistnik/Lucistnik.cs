@@ -27,10 +27,14 @@ namespace DU1_Lucistnik
         //Metoda vystřel
         public void ShootAnArrow ()
         {
-            NumberOfArrows -= NumberOfArrows;
+            NumberOfArrows -= 1;
         }
 
         //Metoda Přidej šípy
+        public void AddArrows()
+        {
+            NumberOfArrows += 1; //možno v budoucnu doplnit dotaz na počet šípů a přidávat dle zadání uživatele
+        }
 
         //Metoda Zobraz stav
         public void DisplayStatus ()
