@@ -27,7 +27,16 @@ namespace DU1_Lucistnik
         //Metoda vystřel
         public void ShootAnArrow ()
         {
-            NumberOfArrows -= 1;
+            
+            if (NumberOfArrows > 0)
+                {
+                NumberOfArrows -= 1;
+                Console.WriteLine ("Úspěšně jsi zasáhl cíl.");
+                }
+            else
+                {
+                Console.WriteLine("!!!Nemáš už žádný šíp!!!");
+                }
         }
 
         //Metoda Přidej šípy
@@ -39,7 +48,7 @@ namespace DU1_Lucistnik
         //Metoda Zobraz stav
         public void DisplayStatus ()
         {
-            Console.WriteLine($"V toulci máš {NumberOfArrows} šípů. ");
+            Console.WriteLine($"Lučištník {Name}: v toulci má {NumberOfArrows} šípů. ");
         }
 
     }
