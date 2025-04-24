@@ -40,4 +40,43 @@ class Program
         }
         william.DisplayStatus(); //pomocné zobrazení počtu šípů na konci programu
     }
+
+    public static int ReadIntFromConsole(string prompt)
+    {     
+        int number;
+        string input;
+        bool isValid;
+        do
+        {
+            Console.WriteLine(prompt);
+            input = Console.ReadLine();
+            isValid = int.TryParse(input, out number) && number>0;
+
+            if (!isValid)
+            {
+                Console.WriteLine("Neplatný vstup, zadej celé kladné číslo. ");
+            }
+        } while (!isValid);
+        return number;
+        
+        /*while(true)
+        {
+            Console.WriteLine (prompt);
+            if (int.TryParse(Console.ReadLine(), out number))
+            {
+                if (number > 0)
+                {
+                    return number;
+                }
+            }
+            Console.WriteLine("Neplatný vstup, zadej celé kladné číslo. "); 
+        }*/
+
+         /* while (!int.TryParse(Console.ReadLine(), out number) || number <= 0){
+            Console.WriteLine("Neplatný vstup, zadej celé kladné číslo. ");
+            }
+            return number;*/
+        
+        
+    }
 }

@@ -29,20 +29,34 @@ namespace DU1_Lucistnik
         {
             
             if (NumberOfArrows > 0)
-                {
+            {
                 NumberOfArrows -= 1;
-                Console.WriteLine ("Úspěšně jsi zasáhl cíl.");
-                }
+                Console.WriteLine ("Úspěšně jsi zasáhl cíl. ");
+            }
             else
-                {
-                Console.WriteLine("!!!Nemáš už žádný šíp!!!");
-                }
+            {
+                Console.WriteLine("!!!Nemáš už žádný šíp!!! ");
+            }
         }
 
-        //Metoda Přidej šípy
+        //Metoda Přidej šípy, která přijímá počet šípů k přidání
         public void AddArrows()
         {
-            NumberOfArrows += 1; //možno v budoucnu doplnit dotaz na počet šípů a přidávat dle zadání uživatele
+            int numberOfAddedArrows = Program.ReadIntFromConsole ("Kolik šípů si přeješ přidat? ");
+            NumberOfArrows += numberOfAddedArrows;
+            Console.WriteLine($"Přidal jsi {numberOfAddedArrows} a máš tedy celkem {NumberOfArrows}");
+            //Console.WriteLine("Kolik šípů si přeješ přidat? ");
+           /* int numberOfAddedArrows;
+            while (!int.TryParse(Console.ReadLine(), out numberOfAddedArrows))
+                Console.WriteLine("Neplatný vstup, zadej celé číslo. ");
+            if(numberOfAddedArrows>= 0)
+            {
+                    NumberOfArrows += numberOfAddedArrows; 
+            }
+            else
+            {
+                Console.WriteLine("Nezadali jste kladné číslo, počet šípů se nezměnil.");
+            }*/
         }
 
         //Metoda Zobraz stav
