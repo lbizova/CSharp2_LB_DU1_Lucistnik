@@ -40,11 +40,11 @@ namespace DU1_Lucistnik
         }
 
         //Metoda Přidej šípy, která přijímá počet šípů k přidání
-        public void AddArrows()
+        public void AddArrows(int numberOfAddedArrows) //parametr metody nahrazuje první následující zakomentovaný řádek
         {
-            int numberOfAddedArrows = Program.ReadIntFromConsole ("Kolik šípů si přeješ přidat? ");
+            //int numberOfAddedArrows = Program.ReadIntFromConsole ("Kolik šípů si přeješ přidat? "); //nahrazeno parametrem metody
             NumberOfArrows += numberOfAddedArrows;
-            Console.WriteLine($"Přidal jsi {numberOfAddedArrows} a máš tedy celkem {NumberOfArrows}");
+            Console.WriteLine($"Přidal jsi {numberOfAddedArrows} a máš tedy celkem {NumberOfArrows} šípů. ");
             //Console.WriteLine("Kolik šípů si přeješ přidat? ");
            /* int numberOfAddedArrows;
             while (!int.TryParse(Console.ReadLine(), out numberOfAddedArrows))

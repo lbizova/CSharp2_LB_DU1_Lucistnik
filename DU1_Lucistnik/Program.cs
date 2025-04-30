@@ -28,7 +28,8 @@ class Program
                     william.ShootAnArrow();
                     break;
                 case 2:
-                    william.AddArrows();
+                    int numberOfAddedArrows = ReadIntFromConsole ("Kolik šípů si přeješ přidat? "); //oprava Dú
+                    william.AddArrows(numberOfAddedArrows); //oparava Dú2
                     break;
                 case 3:
                     break;
@@ -59,7 +60,8 @@ class Program
         } while (!isValid);
         return number;
         
-        /*while(true)
+        /* Jiná funkční varianta
+        while(true)
         {
             Console.WriteLine (prompt);
             if (int.TryParse(Console.ReadLine(), out number))
@@ -72,7 +74,8 @@ class Program
             Console.WriteLine("Neplatný vstup, zadej celé kladné číslo. "); 
         }*/
 
-         /* while (!int.TryParse(Console.ReadLine(), out number) || number <= 0){
+         /* Další funkční varianta 
+         while (!int.TryParse(Console.ReadLine(), out number) || number <= 0){
             Console.WriteLine("Neplatný vstup, zadej celé kladné číslo. ");
             }
             return number;*/
